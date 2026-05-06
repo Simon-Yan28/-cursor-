@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>飞机大战 · Sky Defender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" aria-label="游戏画布"></canvas>
+    <div id="hud">
+      <div class="hud-row">
+        <span id="score-label">得分 <strong id="score">0</strong></span>
+        <span id="wave-label">波次 <strong id="wave">1</strong></span>
+        <span id="lives-label">生命 <strong id="lives">3</strong></span>
+      </div>
+    </div>
+    <div id="panel-start" class="panel">
+      <h1>飞机大战</h1>
+      <p class="sub">Sky Defender</p>
+      <ul class="tips">
+        <li>方向键 / WASD 移动</li>
+        <li>空格 或 J 射击 · P 暂停</li>
+        <li>触屏：拖动战机 · 点按射击</li>
+      </ul>
+      <button type="button" id="btn-start">开始游戏</button>
+    </div>
+    <div id="panel-gameover" class="panel hidden">
+      <h2>游戏结束</h2>
+      <p>最终得分 <strong id="final-score">0</strong></p>
+      <p class="small">再挑战一次？</p>
+      <button type="button" id="btn-retry">重新开始</button>
+    </div>
+    <div id="paused" class="overlay hidden">暂停</div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
